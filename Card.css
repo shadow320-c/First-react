@@ -1,0 +1,88 @@
+/* Container layout for multiple cards */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 16px 12px;
+  gap: 14px; /* Reduced space between cards */
+  box-sizing: border-box;
+}
+
+/* Glassmorphism Card (Sized for Vivo Y22) */
+.profile-card {
+  position: relative;
+  width: 90%;            /* Keeps card well-proportioned on wide mobile screens */
+  max-width: 320px;       /* Compact width ceiling */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;    /* Slightly tighter radius */
+  padding: 16px 14px;     /* Reduced inner padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.profile-card:active {
+  transform: scale(0.98);
+}
+
+/* Avatar Image */
+.card-avatar {
+  width: 70px;            /* Slightly smaller avatar */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;    /* Reduced spacing */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Platform Tag / Subtitle */
+.card-platform {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c084fc;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0 0 4px 0;     /* Tight margin */
+  background: rgba(192, 132, 252, 0.15);
+  padding: 3px 10px;     /* Smaller tag padding */
+  border-radius: 12px;
+  border: 1px solid rgba(192, 132, 252, 0.25);
+}
+
+/* Username */
+.card-username {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 4px 0 12px 0;  /* Compact spacing */
+  letter-spacing: 0.2px;
+}
+
+/* Compact Action Button */
+.card-button {
+  width: 100%;
+  padding: 10px 0;       /* Lower height button for touch ease */
+  background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(168, 85, 247, 0.35);
+  box-sizing: border-box;
+  transition: opacity 0.15s ease;
+}
+
+.card-button:active {
+  opacity: 0.85;
+}
